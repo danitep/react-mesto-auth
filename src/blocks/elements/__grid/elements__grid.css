@@ -1,9 +1,0 @@
-.elements__grid{
-    margin: 0;
-    padding: 0;
-    display: grid;
-    box-sizing: border-box;
-    gap: 20px 17px;
-    grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
-    justify-items: center;
-}
