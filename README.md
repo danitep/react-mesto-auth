@@ -36,4 +36,4 @@
 
 
 ## Ссылка для просмотра сайта
-https://danitep.github.io/mesto-react/
+https://danitep.github.io/react-mesto-auth/
