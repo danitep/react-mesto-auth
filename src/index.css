@@ -10,6 +10,9 @@
 /*Настройки блока header*/
 @import url(./blocks/header/header.css);
 @import url(./blocks/header/__logo/header__logo.css);
+@import url(./blocks/header/__link-container/header__link-container.css);
+@import url(./blocks/header/__email/header__email.css);
+@import url(./blocks/header/__link/header__link.css);
 
 
 /*Настройки блока content*/
@@ -44,9 +47,6 @@
 @import url(./blocks/element/__count/element__count.css);
 @import url(./blocks/element/__container/element__container.css);
 
-/*Заготовка
-@import url();
-*/
 
 /*Настройки блока footer*/
 @import url(./blocks/footer/footer.css);
@@ -69,3 +69,22 @@
 @import url(./blocks/popup/__close/popup__close.css);
 @import url(./blocks/popup/__image/popup__image.css);
 @import url(./blocks/popup/__text/popup__text.css);
+@import url(./blocks/popup/__union/popup__union.css);
+@import url(./blocks/popup/__union/_correct/popup__union_correct.css);
+@import url(./blocks/popup/__union/_incorrect/popup__union_incorrect.css);
+@import url(./blocks/popup/__message/popup__message.css);
+
+/*Заготовка
+@import url();
+*/
+
+/*Настройки блока authentication*/
+@import url(./blocks/authentication/authentication.css);
+@import url(./blocks/authentication/__title/authentication__title.css);
+@import url(./blocks/authentication/__field-container/authentication__field-container.css);
+@import url(./blocks/authentication/__form/authentication__form.css);
+@import url(./blocks/authentication/__input/authentication__input.css);
+@import url(./blocks/authentication/__error/authentication__error.css);
+@import url(./blocks/authentication/__button/authentication__button.css);
+@import url(./blocks/authentication/__alternative/authentication__alternative.css);
+@import url(./blocks/authentication/__link/authentication__link.css);
