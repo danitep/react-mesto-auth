@@ -13,7 +13,7 @@ export default function Header(props){
     <img className="header__logo" src={logoPath} alt="логотип"/>
     <div className="header__link-container">
       <p className="header__email">{props.isloggedIn? props.email:''}</p>
-      <Link className="header__link" to={!props.isloggedIn? props.link: '/sign-up'} onClick={handleClick}>{!props.isloggedIn? props.text:'Выйти'}</Link>
+      <Link className="header__link" to={!props.isloggedIn? props.link: '/sign-in'} onClick={handleClick}>{!props.isloggedIn? props.text:'Выйти'}</Link>
     </div>
     
   </header>

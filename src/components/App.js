@@ -23,6 +23,7 @@ function App() {
 
   const [currentUser, setCurrentUser] = React.useState({});
   const [cards, setCards] = React.useState([]);
+  const [email, setEmail] = React.useState('')
 
   React.useEffect(() => {
     api.getInitialData()
@@ -154,9 +155,7 @@ function App() {
   function handleUserSignUp(email, password){
     authApi.userSignUp(email, password)
     .then((userData)=>{
-      setCurrentUser({...currentUser, 
-        email: userData.data.email
-      });
+      setEmail(userData.data.email);
       setIsLoginCorrect(true);
       navigate('/sign-in', {replace: true});
     })
@@ -187,10 +186,8 @@ function App() {
   function handleUserAuthorization(){
     const jwt = localStorage.getItem('token');
     authApi.userAuthorization(jwt)
-    .then((data)=>{
-      setCurrentUser({...currentUser, 
-        email: data.email
-      });
+    .then((res)=>{
+      setEmail(res.data.email);
       setLoggedIn(true);
       navigate('/', {replace: true});
     })
@@ -201,7 +198,6 @@ function App() {
   function handleExitClick(){
     setLoggedIn(false);
     setIsLoginCorrect(false);
-    navigate('/sign-up', {replace: true});
   }
   
   
@@ -212,7 +208,7 @@ function App() {
     text={headerText}
     isloggedIn={loggedIn}
     onExitClick={handleExitClick}
-    email={currentUser.email}/>
+    email={email}/>
     <Routes>
       <Route path="/" element={
         <ProtectedRouteElement 
